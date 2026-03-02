@@ -1,0 +1,122 @@
+.container {
+    background: #d5d2f8;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    max-width: 400px;
+    animation: cardAppear 0.9s ease forwards;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.expand:active {
+    transition: 0.5s;
+}
+
+.container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.container.featured {
+    border: 2px solid #007aff;
+}
+
+.badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #007aff;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.card-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    color: #8e8686;
+    line-height: 1.3;
+}
+
+.card-excerpt {
+    color: #657786;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.25em;
+}
+
+.card-body {
+    font-size: 0.9rem;
+    color: #4b4b4b;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    margin-top: auto;
+}
+
+.card-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #f0f2f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #8899a6;
+}
+
+.card-author {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.expand {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    background-color: rgb(189, 189, 252);
+    font-size: small;
+    font-weight: bold;
+    height: 40px;
+    width: 100px;
+    margin-top: auto;
+}
+
+
+.expand:hover {
+    border-color: #007aff;
+    background-color: #007aff;
+    transition: 0.3s;
+}
